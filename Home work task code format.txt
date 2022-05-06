@@ -1,0 +1,130 @@
+    //Task
+          int[] arr = {1,2,3,4,5,6,7,8,9,10 };
+
+            int dividedByThreeCount = 0;
+            int dividedByFourCount = 0;
+            int notDividedCount = 0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] % 3 == 0)
+                {
+                    dividedByThreeCount++;
+                }
+                else if (arr[i] % 4 == 0)
+                {
+                    dividedByFourCount++;
+                }
+                else
+                {
+                    notDividedCount++;
+                }
+            }
+            Console.WriteLine("Üçə bölünənlərin sayı: {0}", dividedByThreeCount);
+            Console.WriteLine("Dördə bölünənlərsayı: {0}", dividedByFourCount);
+            Console.WriteLine("Heçbirinə bölünməyənlərin sayı: {0}", notDividedCount); 
+
+
+
+
+
+ // Task 1 :
+             int firstNumber = 20;
+            int secondNumber = 50;
+            int sum = 0;
+            for (int i = firstNumber; i <=secondNumber; i++)
+            {
+                sum = sum +i;
+            }
+            Console.WriteLine(sum);
+
+//Task 2 :
+            Console.WriteLine("1 ci ededi daxil edin :");
+            int startNumber = int.Parse(Console.ReadLine());
+            Console.WriteLine("Ikinci ededi daxil edin");
+            int endNumber = int.Parse(Console.ReadLine());
+            int numberSum = 0; // edelerin cemi
+            int countSum = 0; // nece defe dovru
+            int sum=0;
+            if (startNumber<0 && endNumber<0 ||endNumber<startNumber)
+            {
+                Console.WriteLine("0 dan kicik eded daxil vetmeyin və son ede başlangicdan kicik ola bilmez");
+            }
+            else
+            {
+                for (int i = startNumber; i <=endNumber ; i++)
+                {
+                    countSum++;
+                    numberSum = numberSum + i;
+                    sum = numberSum / countSum;
+
+                }
+            }
+            Console.WriteLine("Ededlerin ortalmasi: {0}",sum);
+
+
+
+  //Task 3:
+            //Task 4:
+
+            string userName;
+            string userSurname;
+            int? userAge;
+            int? userEnglishScore;
+            bool userAgeSuccess;
+            bool userEnglishScoreSuccess;
+
+            do
+            {
+               
+                    Console.WriteLine("Please enter name");
+                    userName = Console.ReadLine();
+                    Console.WriteLine("Please enter surname");
+                    userSurname = Console.ReadLine();
+                    Console.WriteLine("Please enter age");
+                    userAge= int.Parse(Console.ReadLine());
+                  
+                    if (userAge != null)
+                    {
+                        if (userAge < 18)
+                        {
+                            Console.WriteLine("Sizin yaşınız 18 den kicik oldu ucun muraciet ede bilmezsiniz");
+                            userAgeSuccess = false;
+
+                        }
+                        else
+                        {
+                            userAgeSuccess = true;
+                            Console.WriteLine("Texniki inglis dili neticenizi daxil edin :");
+                            userEnglishScore = int.Parse(Console.ReadLine());
+                            if (userEnglishScore < 50)
+                            {
+                                userEnglishScoreSuccess = false;
+                                Console.WriteLine("Tesuffki siz texniki inglis dili neticeniz 50 den asaqi oldugunua gore kursa qeyd oluna bilmersiz");
+                            }
+                            else
+                            {
+                                userEnglishScoreSuccess = true;
+                                Console.WriteLine("Tebrikler siz ugurla kursun qeydiyyatindan kecdiniz");
+                            }
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Yaşinizi qeyd edin !");
+                    }
+               
+            } while (string.IsNullOrWhiteSpace(userName)&&string.IsNullOrWhiteSpace(userSurname));
+
+  //Task 4:
+            int a = 1;
+            int b = 5;
+            int simpleNumberSum = 0;
+            for (int i = a; i <=b; i++)
+            {
+                if (i%2!=0)
+                {
+                    simpleNumberSum +=i;
+                }
+            }
+            Console.WriteLine(simpleNumberSum);
