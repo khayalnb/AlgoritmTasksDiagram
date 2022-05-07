@@ -116,6 +116,35 @@
                
             } while (string.IsNullOrWhiteSpace(userName)&&string.IsNullOrWhiteSpace(userSurname));
 
+===================================================================================================================================================================
+
+            byte age ;
+            int point;
+            do
+            {
+                Console.WriteLine("Yasiniz :");
+                age = byte.Parse(Console.ReadLine());
+                Console.WriteLine("Baliniz :");
+                point = int.Parse(Console.ReadLine());
+                if (age<18)
+                {
+                    Console.WriteLine("Sizin yasiniz kicikdir");
+                }
+                else
+                {
+                    
+                    if (point<50)
+                    {
+                        Console.WriteLine("sizin baliniz azdir");
+                    }
+                    else
+                    {
+                        Console.WriteLine("tebrikler siz ugurla kecdiniz");
+                    }
+                }
+
+            } while (age>8 || point>50);
+
   //Task 4:
             int a = 1;
             int b = 5;
